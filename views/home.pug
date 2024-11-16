@@ -1,0 +1,14 @@
+html
+    head
+    body
+        h1 Welcome edupoly
+        if username
+            h2= username
+        else
+            a(href="/login.html") Login 
+            br
+            a(href="/register.html") Register
+        ul
+            each info in courses
+                li= info.title
+                    a(href="/enroll/"+info._id) enroll
